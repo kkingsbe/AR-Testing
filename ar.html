@@ -2,7 +2,10 @@
 <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
 <body style="margin: 0px; overflow: hidden;">
     <a-scene embedded arjs>
-        <a-asset-item id="porcoolpine" src="Porcoolpine.glb"></a-asset-item>
-        <a-marker-camera preset="hiro"></a-marker-camera>
+        <a-assets>
+            <a-asset-item id="model" src="Porcoolpine.glb"></a-asset-item>
+        </a-assets>
+        <a-entity gltf-model="##model"></a-entity>
+        <a-marker-camera type="pattern" url="pattern-marker.patt"></a-marker-camera>
     </a-scene>
 </body>
